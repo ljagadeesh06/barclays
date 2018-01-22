@@ -31,32 +31,23 @@ import java.util.List;
 public class TrafficSignalApplicationTests {
 	@Test
 	public void buildSignal() {
-
-            Road northRoad = new Road("Snell Road", Constants.NORTH, "N");
-            Road southRoad = new Road("Snell Road", Constants.SOUTH, "S");
-            Road eastRoad = new Road("Weaver Road", Constants.EAST, "E");
-            Road westRoad = new Road("Weaver Road", Constants.WEST, "W");
             List<Road> roads;
             roads = new ArrayList<>(4);
-            roads.add(northRoad);
-            roads.add(southRoad);
-            roads.add(eastRoad);
-            roads.add(westRoad);
+            roads.add(new Road("Snell Road", Constants.NORTH, "N"));
+            roads.add(new Road("Snell Road", Constants.SOUTH, "S"));
+            roads.add(new Road("Weaver Road", Constants.EAST, "E"));
+            roads.add(new Road("Weaver Road", Constants.WEST, "W"));
 
             Intersection signal = IntersectionFactory.createIntersection("NSEW", roads);
             Assert.assertTrue(signal != null);
     }
     @Test(expected = IllegalArgumentException.class)
     public void buildInvalidSignal() {
-
-            Road northRoad = new Road("Snell Road", Constants.NORTH, "N");
-            Road southRoad = new Road("Snell Road", Constants.SOUTH, "S");
-            Road eastRoad = new Road("Weaver Road", Constants.EAST, "E");
             List<Road> roads;
             roads = new ArrayList<>(4);
-            roads.add(northRoad);
-            roads.add(southRoad);
-            roads.add(eastRoad);
+            roads.add(new Road("Snell Road", Constants.NORTH, "N"));
+            roads.add(new Road("Snell Road", Constants.SOUTH, "S"));
+            roads.add(new Road("Weaver Road", Constants.EAST, "E"));
             IntersectionFactory.createIntersection("NSEW", roads);
     }
 
@@ -77,16 +68,12 @@ public class TrafficSignalApplicationTests {
     }
 
     private String properOutput(int iterations){
-        Road northRoad = new Road("Snell Road", Constants.NORTH, "N");
-        Road southRoad = new Road("Snell Road", Constants.SOUTH, "S");
-        Road eastRoad = new Road("Weaver Road", Constants.EAST, "E");
-        Road westRoad = new Road("Weaver Road", Constants.WEST, "W");
         List<Road> roads;
         roads = new ArrayList<>(4);
-        roads.add(northRoad);
-        roads.add(southRoad);
-        roads.add(eastRoad);
-        roads.add(westRoad);
+        roads.add(new Road("Snell Road", Constants.NORTH, "N"));
+        roads.add(new Road("Snell Road", Constants.SOUTH, "S"));
+        roads.add(new Road("Weaver Road", Constants.EAST, "E"));
+        roads.add(new Road("Weaver Road", Constants.WEST, "W"));
 
         Intersection signal = IntersectionFactory.createIntersection("NSEW", roads);
         int iter=0;
