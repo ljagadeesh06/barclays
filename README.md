@@ -8,6 +8,7 @@ This application is implemented as a maven project and with Java 8. In order to 
 ```
 mvn clean install exec:java
 ```
+Options like, number of repetetions of traffic update and others can be configured in **Constants.java** file. 
 
 ### Design
 This solution is designed as per the OOAD standards. Implemented using the following design patterns:  
