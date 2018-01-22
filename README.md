@@ -3,18 +3,18 @@
 
 ### Executing the application
 #### Prerequisites
-This application is implemented as a maven project and with Java 8. In order to execute this application **Maven 3** and **Java 8** should be installed on the target machine. If Maven 3 and Java 8 are installed and configured in the path, following command will run the application and prints the output to console.
+This application is implemented as a maven project and with Java 8. In order to execute this application **Maven 3** and **Java 8** should be installed on the target machine. If Maven 3 and Java 8 are installed and configured in the path the following command will run the application and prints output to the console.
 
 ```
 mvn clean install exec:java
 ```
 
 ### Design
-This solution is designed with proper OOAD standards. Following are the design patterns implemented
+This solution is designed as per the OOAD standards. Implemented using the following design patterns:  
 
-1. Light logic is implemented with state pattern design so that moving cars and changing signals is handled appropriately. It's easy to add another light(Orange) to the existing solution
+1. Light logic is implemented with state pattern design so that moving cars and changing signals is handled appropriately. It is easy to add another light(Orange) to the existing solution.
 
-2. Intersection (Traffic Signals) is created with a factory so that it's easy to add a different intersections with different road options. 
+2. Intersection (Traffic Signals) is created with a factory so that it is easy to add new intersections with more road options, if required. 
 
 
 ### Problem Statement
